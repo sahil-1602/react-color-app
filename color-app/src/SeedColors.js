@@ -56,7 +56,7 @@ export default [
     {
       paletteName: "Flat UI Colors Dutch",
       id: "flat-ui-colors-dutch",
-      emoji: "🇳🇱Flag For Netherlands Emoji (Google Hangouts / Android Version)",
+      emoji: "🇳🇱",
       colors: [
         { name: "Sunflower", color: "#FFC312" },
         { name: "Energos", color: "#C4E538" },
