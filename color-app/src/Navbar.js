@@ -26,14 +26,14 @@ class Navbar extends Component {
         this.setState({ open: false });
     }
     render() {
-        const { level, changeLevel, showingAllColors } = this.props;
+        const { level, changeLevel, showingFullPalette } = this.props;
         const {format} = this.state;
         return (
             <header className="Navbar">
                 <div className="logo">
                     <Link to='/'>React Color Picker</Link>
                 </div>
-                {showingAllColors &&
+                {showingFullPalette &&
                 (<div className="slider-container">
                     <span><b>Level: {level}</b></span>
                     <div className="slider">

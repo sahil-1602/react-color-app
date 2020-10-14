@@ -31,12 +31,12 @@ class Palette extends Component {
                 name={color.name}
                 key={color.id}
                 moreUrl={`/palette/${id}/${color.id}`}
-                showLink ={true}
+                showingFullPalette ={true}
             />
         ));
         return (
             <div className="Palette">
-                <Navbar handleChange={this.changeFormat} level={level} changeLevel={this.changeLevel} showingAllColors={true}/>
+                <Navbar handleChange={this.changeFormat} level={level} changeLevel={this.changeLevel} showingFullPalette={true}/>
                 <div className="Palette-colors">
                     {colorBoxes}
                 </div>
