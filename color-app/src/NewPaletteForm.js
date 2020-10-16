@@ -151,7 +151,6 @@ class NewPaletteForm extends Component {
         <PaletteFormNav
           palettes={this.props.palettes}
           open={open}
-          classes={classes}
           handleSubmit={this.handleSubmit}
           handleDrawerOpen={this.handleDrawerOpen}
         />
