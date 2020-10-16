@@ -7,6 +7,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
+import { Picker } from 'emoji-mart';
+import "emoji-mart/css/emoji-mart.css";
 
 
 class PaletteMetaForm extends Component {
@@ -43,19 +45,22 @@ class PaletteMetaForm extends Component {
     }
 
     render() {
-        const { handleClickOpen, handleClose } = this;
+        const { handleClose } = this;
         const { open, newPaletteName } = this.state;
+        const { hideForm, handleSubmit } = this.props;
         return (
             <div>
               
-              <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+                <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title"
+                    onClose={hideForm}
+                >
                 <DialogTitle id="form-dialog-title">Choose a Palette Name</DialogTitle>
-                <ValidatorForm onSubmit={() => this.props.handleSubmit(newPaletteName)}>
+                <ValidatorForm onSubmit={() => handleSubmit(newPaletteName)}>
                     <DialogContent>
                     <DialogContentText>
                         Please enter a name for your new Palette. Make Sure it's Unique!
                     </DialogContentText>
-                    
+                    <Picker/>
                     <TextValidator
                         label='Palette Name'
                         value={newPaletteName}
@@ -70,7 +75,7 @@ class PaletteMetaForm extends Component {
                         
                     </DialogContent>
                         <DialogActions>
-                        <Button onClick={handleClose} color="primary">
+                        <Button onClick={hideForm} color="primary">
                             Cancel
                         </Button>
                         <Button variant='contained' color='primary' type='submit'>
