@@ -25,6 +25,7 @@ const styles = theme => ({
         }),
         flexDirection: "row",
         justifyContent: "space-between",
+        alignItems:"center",
         height:"64px"
     },
     appBarShift: {
@@ -43,8 +44,14 @@ const styles = theme => ({
         display: "none"
     },
     navBtns: {
-        
-    }
+        marginRight: "1rem",
+        "& a": {
+            textDecoration :"none"
+        } 
+    },
+    button: {
+        margin: "0 0.5rem",
+    },  
 });
 
 
@@ -52,9 +59,15 @@ class PaletteFormNav extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            newPaletteName: ""
+            newPaletteName: "",
+            formShowing:false
         }
         this.handleChange = this.handleChange.bind(this);
+        this.showForm = this.showForm.bind(this);
+    }
+
+    showForm() {
+        this.setState({ formShowing: true });
     }
 
     handleChange(evt) {
@@ -88,13 +101,25 @@ class PaletteFormNav extends Component {
                     </Typography>
                     </Toolbar>
                     <div className={classes.navBtns}>
-                        <PaletteMetaForm
-                            palettes={palettes}
-                            handleSubmit = {handleSubmit}
-                        />
-                        <Link to="/"><Button variant="contained" color="secondary">Go back</Button></Link>        
+                        
+                        <Link to="/"><Button
+                            variant="contained"
+                            color="secondary"
+                            className={classes.button}
+                            >Go back
+                            </Button>
+                        </Link>
+                        <Button className={classes.button} variant="contained" color="primary" onClick={this.showForm}>
+                            Save
+                        </Button>
                     </div>
                 </AppBar>
+                {this.state.formShowing &&
+                    (<PaletteMetaForm
+                        palettes={palettes}
+                        handleSubmit={handleSubmit}
+                    />)
+                }
             </div>
         )
     }
