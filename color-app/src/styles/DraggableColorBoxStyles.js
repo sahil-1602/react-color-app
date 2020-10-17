@@ -38,7 +38,12 @@ const styles = {
         fontSize: "12px",
         display: "flex",
         justifyContent: "space-between",
+        alignItems: "center",
         [sizes.down("sm")]: {
+            padding: "0px",
+            bottom: "0px",
+        },
+        [sizes.down("xs")]: {
             padding: "0px",
             bottom: "0px",
         },

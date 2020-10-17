@@ -21,7 +21,7 @@ export default {
             height: props => props.showingFullPalette? "10%": "20%",
         },
         [sizes.down("xs")]: {
-            width: "100%",
+            width: "98%",
             height: props => props.showingFullPalette? "5%": "10%",
         },
         
@@ -77,7 +77,10 @@ export default {
         color: "black",
         letterSpacing: "1px",
         textTransform: "uppercase",
-        fontSize: "12px"
+        fontSize: "12px",
+        [sizes.down("xs")]: {
+            bottom:"0px"
+        },
     },
     copyOverlay: {
         opacity: "0",
