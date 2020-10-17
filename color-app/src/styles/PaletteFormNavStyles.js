@@ -1,6 +1,7 @@
 import { DRAWER_WIDTH } from '../Constants';
-const drawerWidth = DRAWER_WIDTH;
 import sizes from './Sizes';
+
+const drawerWidth = DRAWER_WIDTH;
 
 
 const styles = theme => ({
