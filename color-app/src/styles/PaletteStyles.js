@@ -1,3 +1,4 @@
+import sizes from './Sizes';
 export default {
     goBack: {
         width: "19.7%",
@@ -27,7 +28,20 @@ export default {
             border: "none",
             textDecoration: "none",
             opacity:"1"
-        }
+        },
+        [sizes.down("lg")]: {
+            width: "25%",
+            height:"33.3333%"
+        },
+        [sizes.down("md")]: {
+            width: "50%",
+            height:"20%"
+        },
+        [sizes.down("xs")]: {
+            width: "100%",
+            height:"10%"
+        },
+        
     },
     palette: {
         height: "100vh",
