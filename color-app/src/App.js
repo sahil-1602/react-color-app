@@ -11,9 +11,11 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { palettes: SeedColors };
+    const savedPalettes = JSON.parse(window.localStorage.getItem("palettes"));
+    this.state = { palettes: savedPalettes || SeedColors  };
     this.savePalette = this.savePalette.bind(this);
     this.findPallete = this.findPallete.bind(this);
+    this.syncLocalStorage = this.syncLocalStorage.bind(this);
   }
 
   findPallete(id) {
@@ -23,7 +25,11 @@ class App extends Component {
   }
 
   savePalette(newPalette) {
-    this.setState({ palettes: [...this.state.palettes, newPalette] });
+    this.setState({ palettes: [...this.state.palettes, newPalette] }, this.syncLocalStorage);
+  }
+
+  syncLocalStorage() {
+    window.localStorage.setItem("palettes", JSON.stringify(this.state.palettes));
   }
 
   render() {
