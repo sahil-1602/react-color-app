@@ -3,6 +3,8 @@
 
 This is a Material UI Colors clone. This is a react app for making and customizing your own palettes color palettes.
 
+[_View Website_](https://sahil-1602.github.io/react-color-app/)
+
 ---
 ## Click Below for Project Demo
 [![Project Demo](http://img.youtube.com/vi/LqDq7w2QCts/0.jpg)](http://www.youtube.com/watch?v=LqDq7w2QCts)
