@@ -5,9 +5,7 @@ This is a Material UI Colors clone. This is a react app for making and customizi
 
 ---
 
-<div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LqDq7w2QCts?start=2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+[![Project Demo](http://img.youtube.com/vi/LqDq7w2QCts/0.jpg)](http://www.youtube.com/watch?v=LqDq7w2QCts)
 
 ---
 ### Build With
