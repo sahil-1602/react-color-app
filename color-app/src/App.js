@@ -97,6 +97,17 @@ class App extends Component {
                   path="/palette/:paletteId/:colorId"
                   render={getSinglePalette}
                 />
+                <Route
+                  render={(routeProps) => (
+                    <Page>
+                      <PaletteList
+                        deletePalette={this.deletePalette}
+                        {...routeProps}
+                        palettes={this.state.palettes}
+                      />
+                    </Page>
+                    )}
+                />
                 </Switch>
               </CSSTransition>
           </TransitionGroup>
