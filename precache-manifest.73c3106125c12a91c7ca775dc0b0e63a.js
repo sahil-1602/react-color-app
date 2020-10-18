@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3a4f9aaa4e797142bade9c39915b71d6",
+    "revision": "9d538069610abd230e070880bd6db1c9",
     "url": "/react-color-app/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-color-app/static/css/2.e3c8c3f1.chunk.css"
   },
   {
-    "revision": "680e816ba64db49a1725",
+    "revision": "1d8d4f370b98d6f3df2d",
     "url": "/react-color-app/static/css/main.54b74f95.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-color-app/static/js/2.c245a549.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "680e816ba64db49a1725",
-    "url": "/react-color-app/static/js/main.32486caa.chunk.js"
+    "revision": "1d8d4f370b98d6f3df2d",
+    "url": "/react-color-app/static/js/main.38467819.chunk.js"
   },
   {
     "revision": "13e01f5f492470fa71cd",
